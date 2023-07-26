@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th="http://www.thymeleaf.com">
+<head>
+    <meta charset="UTF-8"content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <!-- ruta a archivo css-->
+    <title>Formulario de Ccapacitacion</title>
+</head>
+<body>
+<div th:replace="header :: head"></div>
+<div class="container">
+
+    <h1>Crear Capacitación</h1>
+
+    <form method="post" action="/training" id="formulario"   class="form align-self-center">
+
+        <div class="mb-3 row">
+            <label class="col-sm-2 col-form-label" for="id">Identificador:</label>
+            <div class="col-sm-4">
+                <input type="hidden" id="id" name="id" value="0" class="form-control" >
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label class="col-sm-2 col-form-label" for="name">Nombre Capacitación:</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" id="name" name="name" required>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label class="col-sm-2 col-form-label" for="detail">Detalle:</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" id="detail" name="detail" required>
+            </div>
+        </div>
+        <!-- <div class="mb-3 row">
+            <label class="col-sm-2 col-form-label" for="date">Fecha:</label>
+           <div class="col-sm-4">
+               <input class="form-control" type="date" id="date" name="date" required>
+           </div>
+       </div>
+       <div class="mb-3 row">
+           <label class="col-sm-2 col-form-label" for="hour">Hora:</label>
+           <div class="col-sm-4">
+               <input class="form-control" type="text" id="hour" name="hour" required>
+           </div>
+       </div>-->
+        <div class="mb-3 row">
+            <label class="col-sm-2 col-form-label" for="place">Lugar:</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" id="place" name="place" required>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label class="col-sm-2 col-form-label" for="duration">Duración:</label>
+            <div class="col-sm-4">
+                <input  class="form-control" type="text" id="duration" name="duration" required>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label  class="col-sm-2 col-form-label"for="amount">Cantidad de Asistentes:</label>
+            <div class="col-sm-4">
+                <input  class="form-control" type="number" id="amount" name="amount" required>
+            </div>
+        </div>
+        <!--<div th:if="${cust.isPresent()}">
+            <div class="mb-3 row">
+                <label  class="col-sm-2 col-form-label"for="customer">Cliente :</label>
+                <div class="col-sm-4">
+                    <select id="customer" name="customer" class="form-select">
+                        <option th:each="c : ${cust.get()}" th:value="${c.getId()}" th:text="${c.getName()}"></option>
+
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div th:unless="${cust.isPresent()}">
+            <p id="notFound">No encontrado</p>
+
+        </div>-->
+       <!--¿CÓMO CREAR CAPacitación JUNTO CON CUSTOMER Q ES DE TIPO OPTIONAL--!
+        <div class="mb-3 row">
+            <label  class="col-sm-2 col-form-label"for="customer">Cliente :</label>
+            <div class="col-sm-4">
+        <input  class="form-control" type="number" id="customer" name="cliente_id" required>
+            </div>
+        </div>
+        <div class="col-sm-4 align-self-rigth">
+            <button type="submit" class="btn btn-primary">Crear Capacitación</button>
+        </div>
+    </form>
+</div>
+
+
+
+<div th:replace="footer :: foot"></div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- <script src="../static/js/scripts.js"></script> -->
+<!--<script src="../static/js/scripts.js"></script>-->
+<script>
+ $(document).ready(function(){
+    $('#formulario').submit(function(evento){
+        $.ajax({
+            url:'',
+            type: 'POST',
+             data: JSON.stringify({
+                    name:$('#name').val(),
+
+                    })
+             processData: false,
+             contentType:
+        })
+        evento.preventDefault();
+    })
+ })
+</script>
+</body>
+</html>

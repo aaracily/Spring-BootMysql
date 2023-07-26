@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th="http://www.thymeleaf.com">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="header" th:fragment="head">
+
+  <header>
+    <div class="header">
+      <h2>Sistema de Gestión de Capacitación</h2>
+      <ul class="nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="ingresosDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Ingresos
+          </a>
+          <div class="dropdown-menu" aria-labelledby="ingresosDropdown">
+            <a class="dropdown-item" href="ingresousuario.html">Usuarios</a>
+            <a class="dropdown-item" href="ingresocapaciones.html">Capacitaciones</a>
+            <a class="dropdown-item" href="ingresoaccidente.html">Accidentes</a>
+            <a class="dropdown-item" href="ingresocurso.html">Cursos</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="listadosDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Listados
+          </a>
+          <div class="dropdown-menu" aria-labelledby="listadosDropdown">
+            <a class="dropdown-item" href="listadousuarios.html">Usuarios</a>
+            <a class="dropdown-item" href="listadocapacitaciones.html">Capacitaciones</a>
+            <a class="dropdown-item" href="listadoaccidentes.html">Accidentes</a>
+            <a class="dropdown-item" href="listadocursos.html">Cursos</a>
+            <a class="dropdown-item" href="listadoasistencia.html">Asistencia</a>
+            <a class="dropdown-item" href="listadopagos.html">Pagos</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="edicionDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Edición
+          </a>
+          <div class="dropdown-menu" aria-labelledby="edicionDropdown">
+            <a class="dropdown-item" href="editarcapacitacion.html">Capacitación</a>
+            <a class="dropdown-item" href="editaraccidente.html">Accidentes</a>
+            <a class="dropdown-item" href="editarcurso.html">Cursos</a>
+            <a class="dropdown-item" href="editarasistencia.html">Asistencia</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="gestionDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Gestión
+          </a>
+          <div class="dropdown-menu" aria-labelledby="gestionDropdown">
+            <a class="dropdown-item" href="gestionpagos.html">Pagos</a>
+            <a class="dropdown-item" href="gestionasistencia.html">Asistencia</a>
+            <a class="dropdown-item" href="gestioneliminacion.html">Eliminación</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+</div>
+</body>
+</html>
