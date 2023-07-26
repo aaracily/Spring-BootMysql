@@ -18,6 +18,8 @@
       <th>Fecha</th>
       <th>Hora</th>
       <th>Lugar</th>
+      <th>Duración</th>
+      <th>N°Asistentes</th>
       <th>Cliente</th>
       <tbody>
       <tr th:each="list: ${listTrainings.get()}">
@@ -26,7 +28,8 @@
         <td th:text="${list.getDate()}"></td>
         <td th:text="${list.getHour()}"></td>
         <td th:text="${list.getPlace()}"></td>
-
+        <td th:text="${list.getDuration()}"></td>
+        <td th:text="${list.getAmount()}"></td>
         <td >
           <ul th:each="cust : ${list.getCustomer()}">
             <li th:text="${cust.getName()}"></li>

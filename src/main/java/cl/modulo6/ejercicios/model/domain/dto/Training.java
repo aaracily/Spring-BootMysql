@@ -23,4 +23,18 @@ public class Training {
     private int duration;
     private int amount;
     private Customer customer;
+    public Training(String name, String detail,String place, int duration, int amount){
+        this.name = name;
+        this.detail =detail;
+        this.place = place;
+        this.duration = duration;
+        this.amount =amount;
+    }
+    public Training(String name, String detail,LocalDate date,LocalTime hour,String place, int duration, int amount){
+        this.name = name;
+        this.detail =detail;
+        this.place = place;
+        this.duration = duration;
+        this.amount =amount;
+    }
 }
