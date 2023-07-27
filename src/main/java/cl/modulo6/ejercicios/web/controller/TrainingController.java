@@ -12,18 +12,19 @@ import org.springframework.web.bind.annotation.*;
 public class TrainingController {
     //inyección de dependencia- servicioInterface
     private final TrainingService service;
-    private final CustomerService customerServiceservice;
+    private final CustomerService customerService;
 
-    public TrainingController(TrainingService service,  CustomerService customerServiceservice) {
+    public TrainingController(TrainingService service,  CustomerService customerService) {
         this.service = service;
-        this.customerServiceservice = customerServiceservice;
+        this.customerService = customerService;
 
     }
 
     //caso de uso crear capacitacion
     @GetMapping
     public String formTraining(Model model){
-        model.addAttribute("cust",customerServiceservice.findAll());
+        model.addAttribute("cust",customerService.findAll());
+        model.addAttribute("newTraining", new Training());
         return "formTraining";
     }
     @PostMapping

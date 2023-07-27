@@ -10,7 +10,7 @@ import java.util.OptionalInt;
 public interface TrainingService {
     Optional<List<Training>> findAll();
      Optional<Training> findById(int id);
-   Optional<Training> create(Training training);
+  Optional<Training> create(Training training);
     Optional<Training> update(Training training);
     boolean delete(int id);
 }
