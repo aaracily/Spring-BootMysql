@@ -22,10 +22,11 @@ public class TrainingRestController {
                 new ResponseEntity<>(trainings, HttpStatus.OK))
                 .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
    }
-    @PostMapping()
+   /* @PostMapping()
     public ResponseEntity<Training> create(@RequestBody Training t){
-    return service.create(t).map(training ->
+    return
+            service.create(t).map(training ->
             new ResponseEntity<>(t, HttpStatus.CREATED)).
             orElse(new ResponseEntity<>(HttpStatus.CONFLICT));
-    }
+    }*/
 }

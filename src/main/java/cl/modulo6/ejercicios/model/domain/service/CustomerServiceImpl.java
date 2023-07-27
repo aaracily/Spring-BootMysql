@@ -1,6 +1,7 @@
 package cl.modulo6.ejercicios.model.domain.service;
 
 import cl.modulo6.ejercicios.model.domain.dto.Customer;
+import cl.modulo6.ejercicios.model.domain.dto.Training;
 import cl.modulo6.ejercicios.model.persistence.mapper.CustomerMapper;
 import cl.modulo6.ejercicios.model.persistence.repository.CustomerRepository;
 import cl.modulo6.ejercicios.web.service.CustomerService;
@@ -32,8 +33,11 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Optional<Customer> update(Customer customer) {
-         return Optional.of(mapper.toCustomer(repository.save(mapper.toCliente(customer))));
+    public Customer update(Customer customer) {
+         return mapper.toCustomer(repository.save(mapper.toCliente(customer)));
 
+    }
+    public Customer create(Customer customer){
+        return mapper.toCustomer(repository.save(mapper.toCliente(customer)));
     }
 }

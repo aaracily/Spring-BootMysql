@@ -34,7 +34,8 @@ public class TrainingServiceImpl implements TrainingService {
 
     @Override
     public Optional<Training> create(Training training) {
-        return Optional.of(mapper.toTraining(repository.save(mapper.toCapacitacion(training))));
+
+        return  Optional.of(mapper.toTraining(repository.save(mapper.toCapacitacion(training))));
     }
     @Override
     public Optional<Training> update(Training training){

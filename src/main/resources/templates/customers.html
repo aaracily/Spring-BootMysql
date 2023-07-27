@@ -26,9 +26,10 @@
       <th>Comuna</th>
       <th>Edad</th>
       <th>Tipo Usuario</th>
+      <th>Edite</th>
       <tbody>
       <tr th:each="list: ${listCustomers.get()}">
-        <td th:text="${list.getId()}"></td>
+        <td><a th:hre="@{/customer/edit/{id}(id=${list.getId()})}" th:text="${list.getId()}" class="btn btn-success"></a> </td>
         <td th:text="${list.getRut()}" ></td>
         <td th:text="${list.getName()}" ></td>
         <td th:text="${list.getLastName()}"></td>
@@ -40,6 +41,10 @@
         <td th:text="${list.getCommune()}"></td>
         <td th:text="${list.getAge()}"></td>
         <td th:text="${list.getUser().getName()}"></td>
+        <td>
+          <a th:href="@{/customer/edit/{id}(id=${list.getId()})}"
+             class="btn btn-primary">Update</a>
+        </td>
       </tr>
       </tbody>
     </table>
