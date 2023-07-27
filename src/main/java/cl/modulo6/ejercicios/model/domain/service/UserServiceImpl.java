@@ -30,4 +30,9 @@ public class UserServiceImpl implements UserService {
 
         return repository.findById(id).map(mapper ::toUser);
     }
+
+    @Override
+    public Optional<User> create(User user) {
+        return Optional.of(mapper.toUser(repository.save(mapper.toUsuario(user))));
+    }
 }

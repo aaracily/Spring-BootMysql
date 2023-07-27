@@ -16,7 +16,7 @@
       <div class="card">
         <div class="card-body">
           <h3 class="card-title text-center">Inicio de sesión</h3>
-          <form>
+          <form th:action="@{/login}" metod="post">
             <div class="form-group">
               <label for="usuario">Usuario:</label>
               <input type="text" class="form-control" id="usuario">
