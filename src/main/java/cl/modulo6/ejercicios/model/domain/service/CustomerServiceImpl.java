@@ -30,4 +30,10 @@ public class CustomerServiceImpl implements CustomerService {
 
         return Optional.of(mapper.toCustomers(repository.findAll()));
     }
+
+    @Override
+    public Optional<Customer> update(Customer customer) {
+         return Optional.of(mapper.toCustomer(repository.save(mapper.toCliente(customer))));
+
+    }
 }

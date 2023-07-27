@@ -64,12 +64,15 @@
                 <input  class="form-control" type="number" id="amount" name="amount" required>
             </div>
         </div>
-        <!--<div th:if="${cust.isPresent()}">
+        ¿CÓMO CREAR CAPacitación JUNTO CON CUSTOMER Q ES DE TIPO OPTIONAL-->
+      <!--  <div th:if="${cust.isPresent()}">
             <div class="mb-3 row">
                 <label  class="col-sm-2 col-form-label"for="customer">Cliente :</label>
                 <div class="col-sm-4">
                     <select id="customer" name="customer" class="form-select">
-                        <option th:each="c : ${cust.get()}" th:value="${c.getId()}" th:text="${c.getName()}"></option>
+                        <option th:each="c : ${cust.get()}" th:value="${c.getId()}" th:text="${c.getName()}"
+                                //th:selected="${c.getId() ==  }"
+                        </option>
 
                     </select>
                 </div>
@@ -78,14 +81,9 @@
         <div th:unless="${cust.isPresent()}">
             <p id="notFound">No encontrado</p>
 
-        </div>-->
-       ¿CÓMO CREAR CAPacitación JUNTO CON CUSTOMER Q ES DE TIPO OPTIONAL--!
-        <div class="mb-3 row">
-            <label  class="col-sm-2 col-form-label"for="customer">Cliente :</label>
-            <div class="col-sm-4">
-        <input  class="form-control" type="number" id="customer" name="customer" required>
-            </div>
         </div>
+
+      -->
         <div class="col-sm-4 align-self-rigth">
             <button type="submit" class="btn btn-primary">Crear Capacitación</button>
         </div>

@@ -5,32 +5,31 @@ import cl.modulo6.ejercicios.web.service.CustomerService;
 import cl.modulo6.ejercicios.web.service.TrainingService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/training")
 public class TrainingController {
     //inyección de dependencia- servicioInterface
     private final TrainingService service;
-    private final CustomerService cservice;
+    private final CustomerService customerServiceservice;
 
-    public TrainingController(TrainingService service, CustomerService cservice) {
+    public TrainingController(TrainingService service,  CustomerService customerServiceservice) {
         this.service = service;
-        this.cservice = cservice;
+        this.customerServiceservice = customerServiceservice;
+
     }
 
     //caso de uso crear capacitacion
     @GetMapping
     public String formTraining(Model model){
-        //model.addAttribute("cust",cservice.findAll());
+        model.addAttribute("cust",customerServiceservice.findAll());
         return "formTraining";
     }
     @PostMapping
-    public String createTraining (@ModelAttribute Training t){
-    service.create(t);
+    public String createTraining (@ModelAttribute Training training){
+
+    service.create(training);
     return "redirect:/training/list";
     }
     //Caso de uso Listar capacitaciones
