@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th="http://www.thymeleaf.com">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sistema de Gestión de Capacitaciones</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div th:replace="header :: head"></div>
+    <!-- Inicio Codigo pagina   --> 
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-body">
+                            <h1>Formulario de Checklist</h1>
+                            <form action="/checklists/agregar" method="post">
+                                <label for="idCapacitacion">ID Capacitación:</label>
+                                <input type="number" name="idCapacitacion" required><br><br>
+                        
+                                <label for="charla">Charla:</label>
+                                <input type="checkbox" name="charla"><br><br>
+                        
+                                <label for="asistencia">Asistencia:</label>
+                                <input type="checkbox" name="asistencia"><br><br>
+                        
+                                <label for="pago">Pago:</label>
+                                <input type="checkbox" name="pago"><br><br>
+                        
+                                <label for="cierre">Cierre:</label>
+                                <input type="checkbox" name="cierre"><br><br>
+                        
+                                <label for="idProfesional">ID Profesional:</label>
+                                <input type="number" name="idProfesional" required><br><br>
+                        
+                                <label for="fechaUltimaVisita">Fecha Última Visita:</label>
+                                <input type="date" name="fechaUltimaVisita" required><br><br>
+                        
+                                <input type="submit" value="Agregar Checklist">
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Codigo pagina   --> 
+    <div th:replace="footer :: foot"></div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- <script src="../static/js/scripts.js"></script> -->
+    <script src="../static/js/scripts.js"></script>
+    </body>
+    </html>

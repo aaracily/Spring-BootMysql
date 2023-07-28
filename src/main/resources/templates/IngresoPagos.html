@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th="http://www.thymeleaf.com">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Sistema de Gestión de Capacitaciones</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div th:replace="header :: head"></div>
+    <!-- Inicio Codigo pagina   --> 
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-body">
+                            <h1>Formulario de Pago</h1>
+                            <form action="/guardarPago" method="post">
+                                <label for="monto">Monto:</label>
+                                <input type="number" name="monto" required><br><br>
+                        
+                                <label for="fecha">Fecha:</label>
+                                <input type="date" name="fecha" required><br><br>
+                        
+                                <label for="cliente">ID Cliente:</label>
+                                <input type="number" name="cliente" required><br><br>
+                        
+                                <label for="administrativo">ID Administrativo:</label>
+                                <input type="number" name="administrativo" required><br><br>
+                        
+                                <input type="submit" value="Guardar Pago">
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Codigo pagina   --> 
+    <div th:replace="footer :: foot"></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- <script src="../static/js/scripts.js"></script> -->
+    <script src="../static/js/scripts.js"></script>
+    </body>
+    </html>
