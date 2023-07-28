@@ -1,9 +1,6 @@
 package cl.modulo6.ejercicios.model.domain.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -13,6 +10,7 @@ import java.time.LocalTime;
 @NoArgsConstructor
 @Getter
 @Setter
+@ToString
 public class Training {
     private int id;
     private String name;

@@ -1,17 +1,15 @@
 package cl.modulo6.ejercicios.model.domain.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
+@ToString
 public class User {
     private int id;
-    private String name;
+    private String role;
     private String username;
     private String password;
 }

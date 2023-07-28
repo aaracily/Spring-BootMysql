@@ -14,7 +14,7 @@ public interface UserMapper {
     //interface en la que se declara los métodos que hacen el mapeo de dto a entidad
     @Mappings({
             @Mapping(source="id",target="id"),
-            @Mapping(source = "nombre",target="name"),
+            @Mapping(source = "rol",target="role"),
             @Mapping(source = "username",target="username"),
             @Mapping(source = "password",target="password")
     })
