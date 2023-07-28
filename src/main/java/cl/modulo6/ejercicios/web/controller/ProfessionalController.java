@@ -35,5 +35,4 @@ public class ProfessionalController {
         return "redirect:/professional";
 
     }
-
 }

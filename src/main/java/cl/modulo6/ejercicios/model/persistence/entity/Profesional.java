@@ -27,5 +27,4 @@ public class Profesional {
     private Usuario usuario;
 /*    @Column(name = "usuario_id")
     private String userId;*/
-
 }
