@@ -25,9 +25,9 @@ public class CustomerRestController {
                 new ResponseEntity<>(customers, HttpStatus.OK))
                 .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
-    @GetMapping("/{customerId}")
+    /*@GetMapping("/{customerId}")
     public ResponseEntity<Customer> findById(@PathVariable int customerId){
         return service.findById(customerId).map(customer -> new ResponseEntity<>(customer ,HttpStatus.OK)).orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
 
-    }
+    }*/
 }

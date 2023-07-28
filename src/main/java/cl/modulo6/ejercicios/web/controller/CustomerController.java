@@ -1,11 +1,14 @@
 package cl.modulo6.ejercicios.web.controller;
 
 import cl.modulo6.ejercicios.model.domain.dto.Customer;
+import cl.modulo6.ejercicios.model.persistence.mapper.CustomerMapper;
 import cl.modulo6.ejercicios.web.service.CustomerService;
 import cl.modulo6.ejercicios.web.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 @Controller
 @RequestMapping("/customer")
@@ -16,6 +19,7 @@ public class CustomerController {
     public CustomerController(CustomerService service, UserService userService) {
         this.service = service;
         this.userService = userService;
+
     }
 
     @GetMapping()
@@ -31,7 +35,7 @@ public class CustomerController {
     }
     @PostMapping("/edit")
     public String saveEdit(@ModelAttribute Customer customer){
-        service.update(customer);
+       service.update(customer);
         return "redirect:/customer";
 
     }

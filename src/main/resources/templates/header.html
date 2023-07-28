@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en"xmlns:th="http://www.thymeleaf.com">
 <head>
-    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
     <title></title>
 </head>
 <body>
@@ -17,7 +19,7 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="ingresosDropdown">
             <a class="dropdown-item" href="ingresousuario.html">Usuarios</a>
-            <a class="dropdown-item" href="ingresocapaciones.html">Capacitaciones</a>
+            <a class="dropdown-item" th:href="@{/training}">Capacitaciones</a>
             <a class="dropdown-item" href="ingresoaccidente.html">Accidentes</a>
             <a class="dropdown-item" href="ingresocurso.html">Cursos</a>
           </div>
@@ -41,9 +43,9 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="edicionDropdown">
             <a class="dropdown-item" href="editarcapacitacion.html">Capacitación</a>
-            <a class="dropdown-item" href="editaraccidente.html">Accidentes</a>
-            <a class="dropdown-item" href="editarcurso.html">Cursos</a>
-            <a class="dropdown-item" href="editarasistencia.html">Asistencia</a>
+            <a class="dropdown-item" th:href="@{/customer}">Clientes</a>
+            <a class="dropdown-item" href="editarcurso.html">Profesional</a>
+            <a class="dropdown-item" th:href="@{/admin}">Administrativo</a>
           </div>
         </li>
         <li class="nav-item dropdown">
@@ -56,10 +58,22 @@
             <a class="dropdown-item" href="gestioneliminacion.html">Eliminación</a>
           </div>
         </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="gestionDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Contacto
+          </a>
+          <div class="dropdown-menu" aria-labelledby="gestionDropdown">
+            <a class="dropdown-item" href="formContact.html">Formulario</a>
+          </div>
+        </li>
       </ul>
     </div>
   </header>
 
 </div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!--<script src="scripts.js"></script>-->
 </body>
 </html>
