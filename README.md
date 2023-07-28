@@ -6,7 +6,7 @@ Integrantes:
     Ricardo Cea        
     Simón Zelada       
     Eduado Torres      
-    Mauricio Morales    
+    Mauricio Morales   https://github.com/MauricioJMoralesV/SprintMod6.git
 
 Resumen del Proyecto:
 
@@ -20,13 +20,15 @@ Aspectos Relevantes:
 
 Repositorio GitHub:
 
-El código fuente y la documentación completa se encuentran en este enlace.
+El código fuente y la documentación completa se encuentran en este enlace:
+
+https://github.com/aaracily/Spring-BootMysql.git
 Instrucciones de Ejecución:
-    Clonar el repositorio desde GitHub.
-    Configurar el entorno JEE y un servidor de aplicaciones compatible.
-    Importar el proyecto en el IDE.
-    Configurar la conexión a la base de datos.
-    Compilar y desplegar la aplicación en el servidor.
-    Acceder a la URL del sistema y utilizar las credenciales de inicio de sesión correspondientes para cada tipo de usuario.
+    -Clonar el repositorio desde GitHub.
+    -Configurar el entorno JEE y un servidor de aplicaciones compatible.
+    -Importar el proyecto en el IDE.
+    -Configurar la conexión a la base de datos.
+    -Compilar y desplegar la aplicación en el servidor.
+    -Acceder a la URL del sistema y utilizar las credenciales de inicio de sesión correspondientes para cada tipo de usuario.
 
     
