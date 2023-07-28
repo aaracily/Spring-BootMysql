@@ -1,0 +1,15 @@
+body{
+box-sizing:border-box;
+background-color: lightgray;
+
+}
+#navbar{
+letter-spacing:4px;
+
+}
+
+img{
+max-width:1600px;
+min-width:300px;
+max-height: 400px;
+}

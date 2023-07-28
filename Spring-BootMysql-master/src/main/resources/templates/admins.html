@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th="http://www.thymeleaf.com">
+<head>
+  <meta charset="UTF-8"content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- ruta a archivo css-->
+  <title>Lista Administrativos</title>
+
+</head>
+<body>
+<div th:replace="header :: head"></div>
+<div class="container">
+  <h1>LISTA DE ADMINISTRATIVOS</h1>
+  <div th:if="${listAdmins.isPresent()}">
+    <table class="table table-bordered dataTable" id="tablaAdministrativos">
+      <thead class="table-dark">
+      <th>ID</th>
+      <th>RUT</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Correo</th>
+      <th>AREA</th>
+      <th>Tipo Usuario</th>
+      <th>Edite</th>
+      <tbody>
+      <tr th:each="list: ${listAdmins.get()}">
+        <td></td>
+        <td th:text="${list.getRut()}" ></td>
+        <td th:text="${list.getName()}" ></td>
+        <td th:text="${list.getLastName()}"></td>
+        <td th:text="${list.getEmail()}"></td>
+        <td th:text="${list.getArea()}"></td>
+        <td th:text="${list.getUser().getName()}"></td>
+        <td>
+          <a th:href="@{/admin/edit/{id}(id=${list.getId()})}"
+             class="btn btn-primary">Update</a>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div th:unless="${listAdmins.isPresent()}">
+    <p>No se encontraron administrativos</p>
+  </div>
+
+</div>
+<div th:replace="footer :: foot"></div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- <script src="../static/js/scripts.js"></script> -->
+<!--<script src="../static/js/scripts.js"></script>-->
+<script>
+     $(document).ready(function() {
+         $('#tablaAdministrativos').DataTable();
+     });
+ </script>
+
+</body>
+</html>
