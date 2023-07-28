@@ -9,5 +9,5 @@ import java.util.Optional;
 public interface CustomerService {
     Optional<Customer> findById(int id);
     Optional<List<Customer>> findAll();
-    Customer update(Customer customer);
+    Optional<Customer> update(Customer customer);
 }

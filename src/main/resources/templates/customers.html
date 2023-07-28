@@ -29,7 +29,7 @@
       <th>Edite</th>
       <tbody>
       <tr th:each="list: ${listCustomers.get()}">
-        <td><a th:hre="@{/customer/edit/{id}(id=${list.getId()})}" th:text="${list.getId()}" class="btn btn-success"></a> </td>
+        <td th:text="${list.getId()}" ></td>
         <td th:text="${list.getRut()}" ></td>
         <td th:text="${list.getName()}" ></td>
         <td th:text="${list.getLastName()}"></td>

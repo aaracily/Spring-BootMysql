@@ -20,6 +20,7 @@ public class Training {
     private String place;
     private int duration;
     private int amount;
+    private int customerId;
     private Customer customer;
     public Training(String name, String detail,String place, int duration, int amount){
         this.name = name;
@@ -28,11 +29,12 @@ public class Training {
         this.duration = duration;
         this.amount =amount;
     }
-    public Training(String name, String detail,LocalDate date,LocalTime hour,String place, int duration, int amount){
+    public Training(String name, String detail,LocalDate date,LocalTime hour,String place, int duration, int amount,int cutomerId){
         this.name = name;
         this.detail =detail;
         this.place = place;
         this.duration = duration;
         this.amount =amount;
+        this.customerId = cutomerId;
     }
 }

@@ -1,13 +1,13 @@
 package cl.modulo6.ejercicios.web.controller;
 
 import cl.modulo6.ejercicios.model.domain.dto.User;
+import cl.modulo6.ejercicios.model.persistence.mapper.UserMapper;
+import cl.modulo6.ejercicios.web.service.AdministrativeService;
+import cl.modulo6.ejercicios.web.service.CustomerService;
 import cl.modulo6.ejercicios.web.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
@@ -16,9 +16,14 @@ import java.util.Optional;
 public class UserController {
 
     private final UserService service;
-
-    public UserController(UserService service) {
+private final CustomerService customerService;
+private final AdministrativeService administrativeService;
+private final UserMapper mapper;
+    public UserController(UserService service, CustomerService customerService, AdministrativeService administrativeService, UserMapper mapper) {
         this.service = service;
+        this.customerService = customerService;
+        this.administrativeService = administrativeService;
+        this.mapper = mapper;
     }
 
     //controlador caso uso listar usuarios
@@ -36,4 +41,5 @@ public class UserController {
         service.create(user);
         return "redirect:/user/users";
     }
+
 }

@@ -14,13 +14,18 @@
             <table class="table table-bordered dataTable" id="tablaUsuarios">
                 <thead class="table-dark">
                 <th>ID</th>
-                <th>Nombre</th>
+                <th>Rol</th>
                 <th>Nombre Usuario</th>
+                <th>Editar</th>
                 <tbody>
                 <tr th:each="list: ${listUsers.get()}">
                     <td th:text="${list.getId()}"></td>
                     <td th:text="${list.getName()}" ></td>
                     <td th:text="${list.getUsername()}"></td>
+                    <td>
+                        <a th:href="@{/user/edit/{id}(id=${list.getId()})}"
+                           class="btn btn-primary">Editar</a>
+                    </td>
                 </tr>
                 </tbody>
             </table>
