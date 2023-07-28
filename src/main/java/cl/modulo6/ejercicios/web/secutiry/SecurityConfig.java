@@ -34,6 +34,7 @@ public class SecurityConfig {
                 .authorizeRequests()
                 .requestMatchers("/customer/**").hasAuthority("cliente")
                 .requestMatchers("/professional/**").hasAuthority("profesional")
+                .requestMatchers("/admin/**").hasAuthority("administrativo")
                 .and()
                 .httpBasic(Customizer.withDefaults())
                 .formLogin()

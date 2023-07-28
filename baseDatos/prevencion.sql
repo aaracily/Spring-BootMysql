@@ -134,5 +134,8 @@ describe usuario;
 describe capacitacion;
 select * from usuario;
 select * from profesional;
+select * from cliente;
+select * from administrativo;
+select * from visita;
 
 

@@ -11,7 +11,7 @@ INSERT INTO `usuario` VALUES
 (5,'administrativo','usuario5','$2a$12$265cZYjRd6oy0Zdvkvghn.Iz1MGKdNrXR0tR/O97CVpDXZwZqeRTm'),
 (6,'profesional','prof1','$2a$12$HUYBGuafi5/UB6ic/FWc7OEeooPdGhm7sIV6efsAAgnZO5p4kygdm'),
 (7,'administrativo','admin3','$2a$12$265cZYjRd6oy0Zdvkvghn.Iz1MGKdNrXR0tR/O97CVpDXZwZqeRTm'),
-(8,'administrativo','admin3','$2a$12$265cZYjRd6oy0Zdvkvghn.Iz1MGKdNrXR0tR/O97CVpDXZwZqeRTm'),
+(8,'administrativo','admin1','$2a$12$265cZYjRd6oy0Zdvkvghn.Iz1MGKdNrXR0tR/O97CVpDXZwZqeRTm'),
 (9,'cliente','cliente4','$2a$12$ReiiyJ9a7kvjHF3HjqLPl.eqlnv2EGC2e1OeLgOJr3EWd1e2eZjRi'),
 (10,'profesional','profesional2','$2a$12$HUYBGuafi5/UB6ic/FWc7OEeooPdGhm7sIV6efsAAgnZO5p4kygdm'),
 (11,'profesional','profesional3','$2a$12$HUYBGuafi5/UB6ic/FWc7OEeooPdGhm7sIV6efsAAgnZO5p4kygdm'),

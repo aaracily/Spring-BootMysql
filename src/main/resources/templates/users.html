@@ -20,7 +20,7 @@
                 <tbody>
                 <tr th:each="list: ${listUsers.get()}">
                     <td th:text="${list.getId()}"></td>
-                    <td th:text="${list.getName()}" ></td>
+                    <td th:text="${list.getRole()}" ></td>
                     <td th:text="${list.getUsername()}"></td>
                     <td>
                         <a th:href="@{/user/edit/{id}(id=${list.getId()})}"

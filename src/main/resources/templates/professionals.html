@@ -30,6 +30,7 @@
                 <td th:text="${list.getEmail()}"></td>
                 <td th:text="${list.getPhone()}"></td>
                 <td th:text="${list.getUser().getName()}"></td>
+                <td><a th:href="@{/professional/edit/{id}(id=${list.getId()})}"th:text="Editar" class="btn btn-primary"></a></td>
             </tr>
             </tbody>
         </table>
