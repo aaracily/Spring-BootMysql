@@ -4,7 +4,7 @@ Ejercicio Grupal. Desarrollo Aplicacion Sprint boot
 Ejercicio Grupal. Desarrollo Aplicacion Sprint boot
 Proyecto de Asesorías en Prevención de Riesgos Laborales - README
 Integrantes:
-    Aracely Morales    
+    Aracily Morales    
     Ricardo Cea        
     Simón Zelada       
     Eduado Torres      
