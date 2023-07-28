@@ -1,26 +1,13 @@
-@Service
-public class PagosService {
-    private final PagosRepository pagosRepository;
+package cl.modulo6.ejercicios.model.persistence.repository;
 
-    @Autowired
-    public PagosService(PagosRepository pagosRepository) {
-        this.pagosRepository = pagosRepository;
-    }
 
-    public Pagos savePagos(Pagos pagos) {
-        return pagosRepository.save(pagos);
-    }
+import cl.modulo6.ejercicios.model.persistence.entity.Pagos;
 
-    public Pagos getPagosById(Long id) {
-        return pagosRepository.findById(id).orElse(null);
-    }
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-    public List<Pagos> getAllPagos() {
-        return pagosRepository.findAll();
-    }
-
-    public void deletePagos(Long id) {
-        pagosRepository.deleteById(id);
-    }
-
+@Repository
+public interface PagosRepository extends JpaRepository<Pagos, Long> {
 }
+
+

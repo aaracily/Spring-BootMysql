@@ -1,4 +1,9 @@
-import javax.persistence.*;
+package cl.modulo6.ejercicios.model.persistence.entity;
+
+import jakarta.persistence.*;
+
+
+import java.util.Date;
 
 @Entity
 @Table(name = "checklist")

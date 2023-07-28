@@ -1,3 +1,9 @@
+package cl.modulo6.ejercicios.model.persistence.entity;
+
+import jakarta.persistence.*;
+
+import java.util.Date;
+
 @Entity
 public class Pagos {
     @Id
@@ -20,12 +26,5 @@ public class Pagos {
     // Constructors, getters, and setters
 }
 
-public class PagosDTO {
-    private Long id;
-    private double monto;
-    private Date fecha;
-    private Long idCliente;
-    private Long idAdministrativo;
 
-    // Constructors, getters, and setters
-}
+

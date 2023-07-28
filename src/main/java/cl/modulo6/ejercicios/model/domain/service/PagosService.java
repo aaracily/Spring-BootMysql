@@ -1,5 +1,6 @@
-@Service
-public class PagoService {
+
+
+public interface PagosService {
     private final PagoRepository pagoRepository;
 
     public PagoService(PagoRepository pagoRepository) {

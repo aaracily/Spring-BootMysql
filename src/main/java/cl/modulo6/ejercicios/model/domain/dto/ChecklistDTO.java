@@ -1,3 +1,7 @@
+package cl.modulo6.ejercicios.model.domain.dto;
+
+import java.util.Date;
+
 public class ChecklistDTO {
     private Long id;
     private Long idCapacitacion;

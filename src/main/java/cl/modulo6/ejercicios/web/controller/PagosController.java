@@ -1,9 +1,9 @@
 @RestController
 @RequestMapping("/pagos")
 public class PagoController {
-    private final PagoService pagoService;
+    private final PagoServiceImpl pagoService;
 
-    public PagoController(PagoService pagoService) {
+    public PagoController(PagoServiceImpl pagoService) {
         this.pagoService = pagoService;
     }
 

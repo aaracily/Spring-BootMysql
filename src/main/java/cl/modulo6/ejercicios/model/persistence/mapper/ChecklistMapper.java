@@ -1,3 +1,7 @@
+package cl.modulo6.ejercicios.model.persistence.mapper;
+
+import cl.modulo6.ejercicios.model.domain.dto.ChecklistDTO;
+import cl.modulo6.ejercicios.model.persistence.entity.Checklist;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
