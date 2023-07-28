@@ -20,7 +20,8 @@
             <th>Apellido</th>
             <th>Correo</th>
             <th>Teléfono</th>
-            <th>ID Usuario</th>
+<!--            <th>ID Usuario</th>-->
+            <th>Editar</th>
             <tbody>
             <tr th:each="list: ${listProfessional.get()}">
                 <td th:text="${list.getId()}"> </td>
@@ -29,7 +30,7 @@
                 <td th:text="${list.getLastname()}"></td>
                 <td th:text="${list.getEmail()}"></td>
                 <td th:text="${list.getPhone()}"></td>
-                <td th:text="${list.getUser().getName()}"></td>
+<!--                <td th:text="${list.getUser().getName()}"></td>-->
                 <td><a th:href="@{/professional/edit/{id}(id=${list.getId()})}"th:text="Editar" class="btn btn-primary"></a></td>
             </tr>
             </tbody>

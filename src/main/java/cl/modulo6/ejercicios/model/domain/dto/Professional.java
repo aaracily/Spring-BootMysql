@@ -17,5 +17,13 @@ import lombok.*;
         private User user;
         // private String userId;
 
+        public Professional(int id, String run, String name, String lastname, String email, String phone) {
+            this.id = id;
+            this.run = run;
+            this.name = name;
+            this.lastname = lastname;
+            this.email = email;
+            this.phone = phone;
+        }
     }
 

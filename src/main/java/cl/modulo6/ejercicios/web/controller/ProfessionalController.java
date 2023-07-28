@@ -26,7 +26,7 @@ public class ProfessionalController {
     @GetMapping("/edit/{id}")
     public String editProfessional(@PathVariable int id, Model model){
         model.addAttribute("professional",service.findById(id));
-        model.addAttribute("listProfessional",userService.findAll());
+        model.addAttribute("userList",userService.findAll());
         return "formProfessional";
     }
     @PostMapping("/edit")
