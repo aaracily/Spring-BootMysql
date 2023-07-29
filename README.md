@@ -25,6 +25,8 @@ Repositorio GitHub:
 El código fuente y la documentación completa se encuentran en este enlace:
 
 https://github.com/aaracily/Spring-BootMysql.git
+
+El proyecto se encuentra en la rama Ricardo: https://github.com/aaracily/Spring-BootMysql/tree/ricardo
 Instrucciones de Ejecución:
     -Clonar el repositorio desde GitHub.
     -Configurar el entorno JEE y un servidor de aplicaciones compatible.
