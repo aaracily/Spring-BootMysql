@@ -16,21 +16,7 @@
     <div class="col-md-6 offset-md-3">
       <div class="card">
         <div class="card-body">
-          <h3 class="card-title text-center">Inicio de sesión</h3>
-          <form th:action="@{/login}" metod="post">
-            <div class="form-group">
-              <label for="usuario">Usuario:</label>
-              <input type="text" class="form-control" id="usuario">
-            </div>
-            <div class="form-group">
-              <label for="contrasena">Contraseña:</label>
-              <input type="password" class="form-control" id="contrasena">
-            </div>
-            <div class="text-center">
-              <button type="button" class="btn btn-success mr-2" id="limpiarBtn">Limpiar</button>
-              <button type="submit" class="btn btn-success">Ingresar</button>
-            </div>
-          </form>
+          <img th:src="@{/img/imagencita.jpg}" alt="Mi imagen" class="img-fluid">
         </div>
       </div>
     </div>

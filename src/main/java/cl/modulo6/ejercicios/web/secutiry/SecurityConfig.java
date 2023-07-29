@@ -28,13 +28,21 @@ public class SecurityConfig {
         this.repository = repository;
     }
 
+    // pass: cliente: 1010
+    // pass: administrativo: 2020
+    // pass: profesional: 3030
+
     @Bean
     public SecurityFilterChain filterChain (HttpSecurity http) throws Exception {
         return http
                 .authorizeRequests()
-                .requestMatchers("/customer/**").hasAuthority("cliente")
-                .requestMatchers("/professional/**").hasAuthority("profesional")
+                .requestMatchers("/customer/**").hasAuthority("administrativo")
+                .requestMatchers("/professional/**").hasAuthority("administrativo")
                 .requestMatchers("/admin/**").hasAuthority("administrativo")
+                .requestMatchers("/training/**").hasAuthority("cliente")
+                .requestMatchers("/user/**").hasAuthority("administrativo")
+                // TODO: revisar ruteo de permisos...
+                .requestMatchers("/checklist/**").hasAuthority("profesional")
                 .and()
                 .httpBasic(Customizer.withDefaults())
                 .formLogin()

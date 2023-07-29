@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html lang="en"xmlns:th="http://www.thymeleaf.com">
+<html lang="es"xmlns:th="http://www.thymeleaf.com">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Footer</title>
 </head>
 <body>
 <div id="footer" th:fragment="foot">
 
     <footer>
+
+        <div class="container">
+            <button onclick="redirectToLocalLink()">Cerrar sesión</button>
+        </div>
+
         <div class="footer pt-2">
             <div class="container">
                 <div class="row">
@@ -15,12 +20,19 @@
                         <h5 class="m-lg-1">Bootcamp FullStack Java Grupo 5</h5>
                     </div>
                     <div class="col-sm-1  text-right">
-                        <img src="../img/logocasco.png" class="img-fluid" alt="Logo" />
+                        <img th:src="@{/img/logocasco.jpg}" class="img-fluid" alt="Logo" />
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+
+    <script>
+        function redirectToLocalLink() {
+            // Redireccionar al enlace local
+            window.location.href = "http://localhost:8081/prevencion/logout";
+        }
+    </script>
 
 </div>
 
