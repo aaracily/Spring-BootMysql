@@ -4,7 +4,7 @@ Ejercicio Grupal. Desarrollo Aplicacion Sprint boot
 Ejercicio Grupal. Desarrollo Aplicacion Sprint boot
 Proyecto de Asesorías en Prevención de Riesgos Laborales - README
 Integrantes:
-    Aracily Morales    
+    Aracily Morales    https://github.com/aaracily/Spring-BootMysql (repositorio principal)
     Ricardo Cea        
     Simón Zelada       
     Eduado Torres      
