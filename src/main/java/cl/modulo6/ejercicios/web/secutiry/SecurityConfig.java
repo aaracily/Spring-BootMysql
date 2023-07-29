@@ -28,9 +28,9 @@ public class SecurityConfig {
         this.repository = repository;
     }
 
-    // pass: cliente: 1010
-    // pass: administrativo: 2020
-    // pass: profesional: 3030
+    // cliente: username: cliente1 / pass: 1010
+    // administrativo: username: admin1 / pass: 2020
+    // profesional: username: prof1 / pass: profesional: 3030
 
     @Bean
     public SecurityFilterChain filterChain (HttpSecurity http) throws Exception {
