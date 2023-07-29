@@ -12,10 +12,10 @@ public class HomeController {
     public String home(){
     return "index";
 }
-    @GetMapping("/contacto")
+/*    @GetMapping("/contacto")
     public String contacto(){
         return "formContact";
-    }
+    }*/
 
 @PostMapping()
     public String login(){

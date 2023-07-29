@@ -1,3 +1,4 @@
+/*
 body{
 box-sizing:border-box;
  background-color: #f0f0f0;
@@ -28,4 +29,36 @@ letter-spacing:4px;
     padding: 10px;
     color: #fff;
     text-align: center;
+}*/
+
+.header {
+    background-color: #333;
+    padding: 10px;
+    color: #fff;
+}
+
+.header .nav-link {
+    color: lightgreen;
+}
+
+.header .nav-link:hover {
+    color: darkgreen;
+}
+
+.footer {
+    background-color: #333;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+}
+body{
+box-sizing:border-box;
+ background-color: #f0f0f0;
+    font-family: Verdana, Tahoma, Calibri;
+    color: darkgreen;
+
+}
+#navbar{
+letter-spacing:4px;
+
 }

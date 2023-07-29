@@ -3,7 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/style.css">
+<!--  <link rel="stylesheet" href="../css/style.css">-->
     <title>Header</title>
 </head>
 <body>
@@ -48,22 +48,13 @@
             <a class="dropdown-item" th:href="@{/admin}">Administrativo</a>
           </div>
         </li>
+
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="gestionDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Gestión
-          </a>
-          <div class="dropdown-menu" aria-labelledby="gestionDropdown">
-            <a class="dropdown-item" href="gestionpagos.html">Pagos</a>
-            <a class="dropdown-item" href="gestionasistencia.html">Asistencia</a>
-            <a class="dropdown-item" href="gestioneliminacion.html">Eliminación</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="gestionDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="contactoDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Contacto
           </a>
           <div class="dropdown-menu" aria-labelledby="gestionDropdown">
-            <a class="dropdown-item" href="formContact.html">Formulario</a>
+            <a class="dropdown-item" th:href="@{/contacto}">Formulario</a>
           </div>
         </li>
       </ul>
