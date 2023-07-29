@@ -33,6 +33,9 @@ Instrucciones de Ejecución:
     -Compilar y desplegar la aplicación en el servidor.
     -Acceder a la URL del sistema y utilizar las credenciales de inicio de sesión correspondientes para cada tipo de usuario.
 
+
+	Base de datos se encuentra en carpeta "baseDatos" con las respectivas tablas
+
     ACCESOS SPRING SECURITY:
 
 	- cliente: user: cliente1 -> pass: 1010
