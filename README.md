@@ -33,4 +33,8 @@ Instrucciones de Ejecución:
     -Compilar y desplegar la aplicación en el servidor.
     -Acceder a la URL del sistema y utilizar las credenciales de inicio de sesión correspondientes para cada tipo de usuario.
 
-    
+    ACCESOS SPRING SECURITY:
+
+	- cliente: user: cliente1 -> pass: 1010
+	- profesional: user: prof1 -> pass: 3030
+	- administrativo: user: admin1 -> pass: 2020
