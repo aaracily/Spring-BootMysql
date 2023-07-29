@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th="http://www.thymeleaf.com">
+<head>
+    <meta charset="UTF-8"content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Editar Administrativo</title>
+</head>
+<body>
+<div th:replace="header :: head"></div>
+<h1>Administrativo</h1>
+<div class="container">
+    <div th:if="${admin.isPresent()}">
+        <form method="post" th:action="@{/admin/edit}" id="formulario"  class="form align-self-center">
+            <div th:each="ad : ${admin.get()}">
+
+                <div class="mb-3 row">
+                    <div class="col-sm-4">
+                        <input type="hidden" th:value="${ad.getId()}" id="id" name="id" value="0" class="form-control" >
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label" for="run">Run:</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" th:value="${ad.getRun()}"type="text" id="run" name="run" required>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label" for="name">Nombre:</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" th:value="${ad.getName()}" type="text" id="name" name="name" required>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label" for="lastName">Apellido:</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" th:value="${ad.getLastName()}"type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label" for="email">Email:</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" th:value="${ad.getLastName()}"type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label" for="area">Area:</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" th:value="${ad.getArea()}"type="text" id="area" name="area" required>
+                    </div>
+                </div>
+
+
+
+
+                <!-- <div class="col-sm-4">
+                     <select id="user" name="user" class="form-select">
+                         <option th:each="u : ${users}" th:value="${u.getId()}" th:text="${u.getName()}">
+
+                         </option>
+
+                     </select>
+                 </div>-->
+                <div class="col-sm-4 align-self-rigth">
+                    <button type="submit" class="btn btn-primary">Editar Administrativo</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div th:unless="${admin.isPresent()}">
+        <p>No existe registro</p>
+    </div>
+</div>
+<div th:replace="footer :: foot"></div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

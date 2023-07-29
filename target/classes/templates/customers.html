@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th="http://www.thymeleaf.com">
+<head>
+  <meta charset="UTF-8"content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- ruta a archivo css-->
+  <title>Lista Clientes</title>
+
+</head>
+<body>
+<div th:replace="header :: head"></div>
+<div class="container">
+  <h1>LISTA DE CLIENTES</h1>
+  <div th:if="${listCustomers.isPresent()}">
+    <table class="table table-bordered dataTable" id="tablaClientes">
+      <thead class="table-dark">
+      <th>ID</th>
+      <th>RUT</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Correo</th>
+      <th>Teléfono</th>
+      <th>AFP</th>
+      <th>Sistema Salud</th>
+      <th>Dirección</th>
+      <th>Comuna</th>
+      <th>Edad</th>
+      <th>Tipo Usuario</th>
+      <th>Edite</th>
+      <tbody>
+      <tr th:each="list: ${listCustomers.get()}">
+        <td th:text="${list.getId()}" ></td>
+        <td th:text="${list.getRut()}" ></td>
+        <td th:text="${list.getName()}" ></td>
+        <td th:text="${list.getLastName()}"></td>
+        <td th:text="${list.getEmail()}"></td>
+        <td th:text="${list.getPhone()}"></td>
+        <td th:text="${list.getAfp()}"></td>
+        <td th:text="${list.getHealthcareSystem()}"></td>
+        <td th:text="${list.getAddress()}"></td>
+        <td th:text="${list.getCommune()}"></td>
+        <td th:text="${list.getAge()}"></td>
+        <td th:text="${list.getUser().getName()}"></td>
+        <td>
+          <a th:href="@{/customer/edit/{id}(id=${list.getId()})}"
+             class="btn btn-primary">Update</a>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div th:unless="${listCustomers.isPresent()}">
+    <p>No se encontraron clientes</p>
+  </div>
+
+</div>
+<div th:replace="footer :: foot"></div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- <script src="../static/js/scripts.js"></script> -->
+<!--<script src="../static/js/scripts.js"></script>-->
+<script>
+     $(document).ready(function() {
+         $('#tablaClientes').DataTable();
+     });
+ </script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th="http://www.thymeleaf.com">
+<head>
+    <meta charset="UTF-8"content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- ruta a archivo css-->
+    <title>Lista Profesionales</title>
+
+</head>
+<body>
+<div th:replace="header :: head"></div>
+<div class="container">
+    <h1>LISTA DE PROFESIONALES</h1>
+    <div th:if="${listProfessional.isPresent()}">
+        <table class="table table-bordered dataTable" id="tablaClientes">
+            <thead class="table-dark">
+            <th>ID</th>
+            <th>RUN</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Correo</th>
+            <th>Teléfono</th>
+<!--            <th>ID Usuario</th>-->
+            <th>Editar</th>
+            <tbody>
+            <tr th:each="list: ${listProfessional.get()}">
+                <td th:text="${list.getId()}"> </td>
+                <td th:text="${list.getRun()}" ></td>
+                <td th:text="${list.getName()}" ></td>
+                <td th:text="${list.getLastname()}"></td>
+                <td th:text="${list.getEmail()}"></td>
+                <td th:text="${list.getPhone()}"></td>
+<!--                <td th:text="${list.getUser().getName()}"></td>-->
+                <td><a th:href="@{/professional/edit/{id}(id=${list.getId()})}"th:text="Editar" class="btn btn-primary"></a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div th:unless="${listProfessional.isPresent()}">
+        <p>No se encontraron clientes</p>
+    </div>
+
+</div>
+<div th:replace="footer :: foot"></div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- <script src="../static/js/scripts.js"></script> -->
+<!--<script src="../static/js/scripts.js"></script>-->
+<script>
+     $(document).ready(function() {
+         $('#tablaClientes').DataTable();
+     });
+ </script>
+
+</body>
+</html>
