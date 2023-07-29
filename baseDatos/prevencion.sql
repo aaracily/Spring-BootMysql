@@ -132,6 +132,7 @@ describe administrativo;
 describe cliente;
 describe usuario;
 describe capacitacion;
+describe visita;
 select * from usuario;
 select * from profesional;
 select * from cliente;
