@@ -18,10 +18,11 @@ public class Administrative {
     private String email;
     private String area;
     private Usuario user;
+
 public Administrative(int id, String name, String lastName, String area){
     this.id =id;
     this.name =name;
     this.lastName = lastName;
-    this.area =area;
+    this.area = area;
 }
 }
